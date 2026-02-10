@@ -1,4 +1,4 @@
-/* Tử Vi Kit - Lập Lá Số Tử Vi Styles */
+/* Tử Vi Kit - Complete MVP Styles */
 
 :root {
     --primary-color: #8B4513;
@@ -11,11 +11,7 @@
     --than-color: #87CEEB;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,10 +21,7 @@ body {
     padding: 20px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-}
+.container { max-width: 900px; margin: 0 auto; }
 
 /* Header */
 header {
@@ -41,16 +34,8 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-header p {
-    font-size: 1.1em;
-    opacity: 0.9;
-}
+header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+header p { font-size: 1.1em; opacity: 0.9; }
 
 /* Input Section */
 .input-section {
@@ -69,9 +54,14 @@ header p {
     border-bottom: 2px solid var(--secondary-color);
 }
 
-.form-group {
-    margin-bottom: 20px;
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
 }
+
+.form-group { margin-bottom: 15px; }
 
 .form-group label {
     display: block;
@@ -102,6 +92,7 @@ header p {
     margin-top: 5px;
     color: #666;
     font-style: italic;
+    font-size: 0.85em;
 }
 
 .btn-primary {
@@ -117,6 +108,7 @@ header p {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .btn-primary:hover {
@@ -135,8 +127,8 @@ header p {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Lá Số Header */
-.laso-header {
+/* Tứ Trụ Section */
+.tu-tru-section {
     background: var(--card-bg);
     padding: 25px;
     border-radius: 15px;
@@ -145,17 +137,85 @@ header p {
     border: 2px solid var(--border-color);
 }
 
-.laso-header h2 {
+.tu-tru-section h3 {
     color: var(--primary-color);
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
-/* Info Grid */
+.tu-tru-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.tru-item {
+    background: linear-gradient(135deg, #FFE4B5 0%, #FFDEAD 100%);
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.tru-item:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+.tru-item .label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tru-item .can-chi {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.tru-item .hanh {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.hanh-moc { background: #90EE90; color: #006400; }
+.hanh-hoa { background: #FFB6C1; color: #8B0000; }
+.hanh-tho { background: #F4A460; color: #8B4513; }
+.hanh-kim { background: #D3D3D3; color: #4B0082; }
+.hanh-thuy { background: #87CEEB; color: #00008B; }
+
+/* Lá Số Tử Vi */
+#tuViResult {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    border: 2px solid var(--border-color);
+}
+
+.laso-header {
+    margin-bottom: 20px;
+}
+
+.laso-header h3 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
@@ -180,26 +240,13 @@ header p {
     color: var(--primary-color);
 }
 
-/* Lá Số Grid - 12 Cung Layout */
+/* 12 Cung Grid */
 .laso-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
     gap: 8px;
-    background: var(--card-bg);
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border: 2px solid var(--border-color);
+    margin-top: 20px;
 }
-
-/* Layout:
-   [Thìn][Tỵ][Ngọ][empty]
-   [Mão][empty][empty][Mùi]
-   [Dần][empty][empty][Thân]
-   [Sửu][empty][empty][Dậu]
-   [empty][Tý][Hợi][Tuất]
-*/
 
 .cung {
     background: linear-gradient(135deg, #FFF8DC 0%, #FFEFD5 100%);
@@ -212,10 +259,7 @@ header p {
     transition: all 0.3s ease;
 }
 
-.cung:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+.cung:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 
 .cung-menh {
     border-color: var(--menh-color);
@@ -231,6 +275,7 @@ header p {
 .cung-empty {
     background: transparent;
     border: none;
+    min-height: auto;
 }
 
 .cung-header {
@@ -240,6 +285,7 @@ header p {
     margin-bottom: 8px;
     padding-bottom: 5px;
     border-bottom: 1px dashed var(--border-color);
+    flex-wrap: wrap;
 }
 
 .cung-chi {
@@ -262,15 +308,8 @@ header p {
     margin-left: 3px;
 }
 
-.badge.menh {
-    background: var(--menh-color);
-    color: #8B4513;
-}
-
-.badge.than {
-    background: var(--than-color);
-    color: #1E3A5F;
-}
+.badge.menh { background: var(--menh-color); color: #8B4513; }
+.badge.than { background: var(--than-color); color: #1E3A5F; }
 
 /* Sao */
 .cung-sao-chinh {
@@ -294,23 +333,44 @@ header p {
     display: inline-block;
 }
 
-.sao.chinh {
-    font-size: 0.95em;
-    padding: 4px 8px;
+.sao.chinh { font-size: 0.95em; padding: 4px 8px; }
+.sao.phu { font-size: 0.75em; background: #F5F5F5; color: #555; }
+
+/* Luận Giải Section */
+.luan-section {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    border: 2px solid var(--border-color);
 }
 
-.sao.phu {
-    font-size: 0.75em;
-    background: #F5F5F5;
+.luan-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.luan-giai-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #FFF5E6;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.luan-giai-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.luan-giai-item p {
     color: #555;
+    line-height: 1.6;
 }
-
-/* Ngũ Hành colors */
-.hanh-moc { background: #90EE90; color: #006400; }
-.hanh-hoa { background: #FFB6C1; color: #8B0000; }
-.hanh-tho { background: #F4A460; color: #8B4513; }
-.hanh-kim { background: #D3D3D3; color: #4B0082; }
-.hanh-thuy { background: #87CEEB; color: #00008B; }
 
 /* Footer */
 footer {
@@ -326,39 +386,21 @@ footer a {
     font-weight: 600;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
+footer a:hover { text-decoration: underline; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .laso-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .cung-empty {
-        display: none;
-    }
-    
-    header h1 {
-        font-size: 2em;
-    }
+    .form-row { grid-template-columns: 1fr; }
+    .tu-tru-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .laso-grid { grid-template-columns: repeat(2, 1fr); }
+    .cung-empty { display: none; }
+    header h1 { font-size: 2em; }
 }
 
 @media (max-width: 480px) {
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .laso-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .cung {
-        min-height: auto;
-    }
+    .tu-tru-grid { grid-template-columns: 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
+    .laso-grid { grid-template-columns: 1fr; }
+    .input-section { padding: 20px; }
 }
